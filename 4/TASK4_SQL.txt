@@ -1,0 +1,24 @@
+--Создание таблицы
+CREATE TABLE sql_task_4(
+	Full_name VARCHAR(100),
+	E_mail VARCHAR(50),
+	Phone INT(11),
+	Date_of_birth DATE,
+	Time_and_date_of_cretion DATETIME DEFAULT NOW(),
+	Passport_ID INT(10),
+	Middle_place_on_competitions DECIMAL(2, 1),
+	Biography TEXT,
+	Video_presentation VARCHAR(250)
+	);
+
+--Внесение данных
+
+INSERT sql_task(Full_name, E_mail, Phone, Date_of_birth, Age, Date_and_recording_time, Passport_ID, Middle_place, Biography, Video_presentation)
+VALUES ((**),(**),
+('Петров Сергей Анатольевич', 'petrov@mail.ru', 89997776622, 1990-10-03, CURRENT_TIMESTAMP, 1920192546, 2.3, 'Bla-bla', 'link'));
+
+--Выбор 5 верхних
+SELECT Full_name
+from sql_task
+ORDER BY Middle_place
+LIMIT 5;
